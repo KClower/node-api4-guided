@@ -12,6 +12,10 @@ server.get('/goodbye', (req, res) => {
   res.json('Have a good day');
 });
 
+server.get('/where', (req, res) => {
+  res.json('I am at the store.');
+});
+
 server.use('*', (req, res) => {
   res.json({ message: 'API is UP!' })
 });
