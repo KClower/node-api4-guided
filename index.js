@@ -8,9 +8,14 @@ server.get('/hello', (req, res) => {
   res.json('hello, there');
 });
 
+// server.get('/goodbye', (req, res) => {
+//   res.json('Have a good day');
+// });
+
 server.use('*', (req, res) => {
   res.json({ message: 'API is UP!' })
 });
+
 
 const port = process.env.PORT || 5000;
 
